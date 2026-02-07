@@ -3,26 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css.css">
+   <link rel="stylesheet" href="css.css">
 <title>Wedding!!!</title>
 </head>
-<body class="bungee-regular">
-	<div class="container">
-		<h1 class="center-text">Rosie and Sam's Wedding</h1>
-		<div class="center-text">
-			<h2>26/09/26</h2>
-			<p>Manor Farm House</p>
-			<p>Kington Magna</p>
-			<p>Dorset</p>
-			<p>SP8 5EG</p>
+<body >
+	  <section id="first">
+      <h1>Rosie & Sam's Wedding</h1>
+      <div class="bottom">
+        <h2>26/09/26</h2>
+        <p>Manor Farm House</p>
+				<p>Kington Magna</p>
+				<p>Dorset</p>
+				<p>SP8 5EG</p>
+      </div>
+    </section>
+    
+    <section class="blue">
+      <div class="pad">
+        <h2>Accomodation</h2>
+        <p>Here is a list of some of the local hotels, or you are welcome to bring a tent.</p>
+        <br>
+        <ul>
+          <li><a href="https://www.booking.com/searchresults.en-gb.html?ss=SP8+5EG&ssne=SP8+5EG&ssne_untouched=SP8+5EG&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaFCIAQGYAQm4ARfIAQ_YAQHoAQGIAgGoAgO4Aq_2pa0GwAIB0gIkNDlhYjdlZjEtYzUzNS00Y2JmLWEyN2YtM2FjMmNkNDYwNzI32AIF4AIB&sid=b579cfb5736720d67c1f56da9271a045&aid=304142&lang=en-gb&sb=1&src_elem=sb&src=searchresults&latitude=51.0073774588654&longitude=-2.332780108&checkin=2026-09-26&checkout=2026-09-27&group_adults=2&no_rooms=1&group_children=0" target="_blank">Booking.com</a></li>
+          <li><a href="https://atthechapel.co.uk/rooms" target="_blank">The Chapel</a></li>
+          <li><a href="https://shipinn-dorset.com/index.php/rooms" target="_blank">The Ship</a></li>
+          <li><a href="https://www.travelodge.co.uk/hotels/561/Wincanton-hotel" target="_blank">Travelodge</a></li>
+          <li><a href="http://tinyurl.com/ydevsjrd" target="_blank">Local Airbnbs</a></li>
+          <li><a href="https://thenewtinsomerset.com/hotel" target="_blank">The Newt (£££)</a></li>
+        </ul>
+		  </div>
 
-		</div>
-	</div>
+    </section>
+<!--
+    <section>
+      <div class="pad">
+        <h2>What to expect on the day</h2>
+        <p>2pm - Arrival and Canapes</p>
+        <p>5pm - Food Available</p>
+      </div>
+    </section>
+    <section class="blue">
+      <div class="pad">
+        <h2>TAXIS</h2>
+        <p> This is not an exhaustive list, other local taxi firms are available</p>
+        <ul>
+          <li>Ace Taxis - 01747 821111</li>
+          <li>A2B Taxis - 07716829844</li>
+          <li>A & O Taxi -07882712431</li>
+          <li>S&G Taxis - 01747 822215</li>
+          <li>Lancelot Cabs - 07500898027</li>
+        </ul>
+      </div>
+    </section> -->
+<script>
+  function randomizeH1Letters() {
+    const h1 = document.querySelector('h1');
+    const spans = h1.querySelectorAll('span');
+    
+    if (spans.length === 0) {
+      // First time: wrap each letter in a span
+      const text = h1.textContent;
+      h1.innerHTML = '';
+      
+      for (let char of text) {
+        const span = document.createElement('span');
+        span.style.transition = 'font-variation-settings 1000ms';
+        span.textContent = char;
+        h1.appendChild(span);
+      }
+    }
+    
+    // Update variations on all spans
+    h1.querySelectorAll('span').forEach(span => {
+      span.style.transition = 'font-variation-settings 800ms ease-in-out';
+      const opsz = Math.floor(Math.random() * (144 - 20 + 1)) + 20;
+      const wght = Math.floor(Math.random() * (900 - 100 + 1)) + 100;
+      const soft = Math.floor(Math.random() * 101);
+      
+      span.style.fontVariationSettings = `'opsz' ${opsz}, 'wght' ${wght}, 'SOFT' ${soft}`;
+    });
+  }
+  
+  const h1 = document.querySelector('h1');
+  randomizeH1Letters();
+  // Run continuously every 1200ms to allow full animation completion
+  const randomizeInterval = setInterval(randomizeH1Letters, 1200);
+  h1.addEventListener('click', randomizeH1Letters);
+</script>
 </body>
-
-</html>
 
 

@@ -18,16 +18,13 @@ body{
 }
 
 h1{
-  font-size: 8vw;
+  font-size: 6em;
   width:50%;
   left:50%;
   transform: translateX(-50%);
   position: absolute;
   top:10px;
   text-transform: uppercase;
-}
-h2{
-  font-size: 2.5rem;
 }
 ul{
   list-style: none;
@@ -52,7 +49,7 @@ section{
   justify-content: center;
 }
 .blue{
-  background-color: #657147;
+  background-color: #0a1557;
   color: #F0EEE9;
 }
 .bottom{
@@ -60,13 +57,4 @@ section{
   bottom: 10px;
   left:50%;
   transform: translateX(-50%);
-}
-#first{
-  background-image: url(us.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #F0EEE9;
-}
-.pad{
-  padding: 20px;
 }

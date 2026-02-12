@@ -58,3 +58,4 @@ section{
   left:50%;
   transform: translateX(-50%);
 }
+@media (max-width: 600px) {h1{ font-size: 16vw; width:90%; } }
